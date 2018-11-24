@@ -4,6 +4,11 @@
     <div class="cover-inner">
       <div class="cover-contents">
         <h1>WELCOME TO the FOOD DIARY</h1>
+        
+        <% unless logged_in? %>
+          <%= link_to 'START', signup_path, class: 'btn btn-success btn-lg' %>
+        <% end %>
+        
       </div>
     </div>
   </div>
