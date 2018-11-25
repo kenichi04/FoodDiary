@@ -3,7 +3,7 @@
     <div class="user-profile">
       <div class="icon text-center">
         <img src="
-        <%= gravatar_url(@user, size: 200) %>
+        <%= gravatar_url(@user, size: 150) %>
         " alt="" class="img-circle">
       </div>
     </div>
@@ -16,11 +16,20 @@
       </div>
     </div>
     <ul class="nav nav-tabs nav-justified">
-      <li><a href="#">投稿</a></li>
+      <li>
+        <%= link_to user_path(@user) do %>
+          投稿 
+          <span class="badge">
+            <%= @count_posts %>
+          </span> 
+        <% end %>
+      </li>
       <li><a href="#">フォロー</a></li>
       <li><a href="#">フォロワー</a></li>
       <li><a href="#">お気に入り</a></li>
     </ul>
+    
+  <%= render 'posts/posts', posts: @posts %>
+    
   </div>
-  
 </div>
