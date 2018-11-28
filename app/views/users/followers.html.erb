@@ -50,7 +50,14 @@
           </span>
         <% end %>
       </li>
-      <li><a href="#">お気に入り</a></li>
+      <li>
+        <%= link_to likes_user_path(@user) do %>
+          お気に入り
+          <span class="badge">
+            <%= @count_like_posts %>
+          </span>
+        <% end %>
+      </li>
     </ul>
   </div>
   

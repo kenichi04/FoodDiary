@@ -15,9 +15,15 @@
 <% end %>
 
   <% if logged_in? %>
-    <div class="post-button text-center">
-      <%= link_to '新規投稿はこちら', new_post_path, class: 'btn btn-success btn-lg' %>
+    <div class="start-button text-center">
+      <span class="button">
+        <%= link_to '新規投稿はこちら', new_post_path, class: 'btn btn-success btn-lg' %>
+      </span>
+      <span class="button">
+        <%= link_to 'マイページへ行く', user_path(current_user), class: 'btn btn-info btn-lg' %>
+      </span>
     </div>
+      
   <% else %>
     <div class="start-button text-center">
       <span class="button">  
