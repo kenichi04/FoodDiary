@@ -3,25 +3,21 @@
   <% users.each do |user| %>
   
     <aside class="col-xs-4">
-      <div class="user-profile">
-        <div class="icon text-center">
+      <div class="follow-profile-left">
+        <div class="icon text-right">
           <img src="
-          <%= gravatar_url(user, size: 60) %>
+          <%= gravatar_url(user, size: 80) %>
           " alt="" class="img-circle">
         </div>
       </div>
     </aside>
     
     <div class="col-xs-8">
-      <div class="user-profile">
-        <div class="user-name">
+      <div class="follow-profile-right">
+        <div class="follow-name">
           
-          <%= link_to user_path(user) do %>
-            <p><%= user.name %></p>
-            <span>
-              <%= render 'relationships/follow_button' %>
-            </span>
-          <% end %>
+          <h4><%= user.name %></h4>
+          <%= link_to 'go profile', user_path(user), class: 'btn btn-info' %>
         
         </div>
       </div>
