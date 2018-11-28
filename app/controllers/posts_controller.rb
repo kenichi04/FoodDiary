@@ -14,7 +14,7 @@ class PostsController < ApplicationController
     else
       @posts = Post.all.page(params[:page])
       flash.now[:danger] = '投稿に失敗しました。'
-      render 'toppages/index'
+      render 'new'
     end
   end
 
@@ -27,7 +27,7 @@ class PostsController < ApplicationController
   private
   
   def post_params
-    params.require(:post).permit(:contnt, :image)
+    params.require(:post).permit(:content, :image)
   end
   
   def correct_user

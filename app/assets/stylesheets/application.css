@@ -1,15 +1,153 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@charset "utf-8";
+
+body {
+  background: #f2f2f2;
+}
+footer {
+  margin-top: 40px;
+}
+
+.navbar-header {
+  margin-top: 5px;
+  height: 40px;
+}
+
+.cover {
+  margin-top: 5px;
+  margin-bottom: 50px;
+  width: 100%;
+  height: 270px;
+  background: url("/images/chef-1417239_640.png") center center no-repeat;
+}
+
+.cover .cover-inner {
+  height: 100%;
+  margin: auto;
+  display: table;
+}
+
+.cover .cover-inner .cover-contents {
+  display: table-cell;
+  vertical-align: bottom;
+  text-align: center;
+  position: relative;
+}
+
+.top-message {
+  height: 60px;
+  text-align: center;
+  position: relative;
+  background: orange;
+  margin-bottom: 30px;
+}
+.top-message h1 {
+  margin: auto;
+  padding-top: 10px;
+}
+
+
+.start-button {
+  margin-top: -10px;
+  margin-bottom: 30px;
+}
+.start-button .button {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+.post-button {
+  margin-top: -10px;
+  margin-bottom: 30px;
+}
+
+.post .panel-default {
+  margin-top: 50px;
+}
+
+.post .panel-body {
+  height: 70px;
+}
+
+.post .panel-heading {
+  height: 250px;
+}
+
+.post .panel-heading img {
+  height: 100%;
+  max-width: 100%;
+}
+
+.post .buttons form {
+  display: inline-block;
+}
+
+.user-name h1 {
+  display: inline;
+}
+
+.user-name p {
+  display: inline;
+}
+
+.user-name .user-follow {
+  display: inline;
+}
+
+.col-xs-8 .user-profile {
+  margin-top: 30px;
+}
+
+.col-xs-8 .user-profile .user-name .in-name{
+  position: relative;
+  top: 10px;
+}
+
+
+.follow-button {
+  display: inline;
+}
+
+.follow-button .submit {
+  display: inline;
+  margin-left: 20px;
+}
+
+.edit_relationship {
+  display: inline;
+}
+
+.new_relationship {
+  display: inline;
+}
+
+
+.nav-justified {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.user-link p {
+  display: inline;
+  font-size: 20px;
+}
+
+.text-right {
+  float: right;
+}
+.under-panel {
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+
+.post-in {
+  margin-top: 30px;
+}
+.ppost-in .post-text {
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.user-profile .user-name {
+  display: inline;
+}

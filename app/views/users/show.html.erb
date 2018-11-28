@@ -10,13 +10,23 @@
   </aside>
   
   <div class="col-xs-8">
-    <div class="user-profile">
-      <div class="name text-center">
-        <%= @user.name %>
+      <div class="user-profile">
+        <div class="user-name">
+          <h1 class="in-name">
+            <%= @user.name %>
+          </h1>
+          <span class="user-follow">
+            <%= render 'relationships/follow_button' %>
+          </span>
+        </div>
       </div>
-    </div>
+  </div>
+  
+  <div class="col-xs-12">
     <ul class="nav nav-tabs nav-justified">
-      <li>
+      <li class="
+      <%= 'active' if current_page?(user_path(@user)) %>
+      ">
         <%= link_to user_path(@user) do %>
           投稿 
           <span class="badge">
@@ -24,12 +34,28 @@
           </span> 
         <% end %>
       </li>
-      <li><a href="#">フォロー</a></li>
-      <li><a href="#">フォロワー</a></li>
+      <li>
+        <%= link_to followings_user_path(@user) do %>
+          フォロー
+          <span class="badge">
+            <%= @count_followings %>
+          </span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to followers_user_path(@user) do %>
+          フォロワー
+          <span class="badge">
+            <%= @count_followers %>
+          </span>
+        <% end %>
+      </li>
       <li><a href="#">お気に入り</a></li>
     </ul>
-    
-  <%= render 'posts/posts', posts: @posts %>
-    
   </div>
+
 </div>
+
+
+  
+<%= render 'posts/posts', posts: @posts %>

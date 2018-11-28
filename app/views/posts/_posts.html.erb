@@ -5,7 +5,7 @@
       <% posts.each do |post| %>
       
         <div class="post">
-          <div class="col-sm-4 col-xs-12">
+          <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="panel panel-default">
               <div class="panel-heading text-center">
                 <img src="
@@ -13,14 +13,25 @@
                 " alt="">
               </div>
               <div class="panel-body">
-                <p><%= past.content %></p>
+                <p><%= post.content %></p>
               </div>
+            </div>
+            
+            
+            <div class="under-panel">
+              <span class="user-link">
+                <p>
+                  name：<%= link_to post.user.name, user_path(post.user) %>
+                </p>
+              </span>
               
               <% if current_user == post.user %>
-                <%= link_to 'Delete', post, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-xs' %>
+                <span class="buttons text-right">
+                  <%= link_to 'Delete', post, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger' %>
+                </span>
               <% end %>
-              
             </div>
+            
             
             
           </div>
@@ -30,5 +41,3 @@
     
   </div>
 <% end %>
-
-<%= paginate posts %>

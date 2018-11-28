@@ -1,25 +1,33 @@
 <% content_for :cover do %>
 
+
+  <div class="top-message">
+    <h1>きょうは なに 食べよう ？</h1>
+  </div>
+
   <div class="cover">
     <div class="cover-inner">
       <div class="cover-contents">
-        <h1>WELCOME TO the FOOD DIARY</h1>
-        
-        <% unless logged_in? %>
-          <%= link_to 'START', signup_path, class: 'btn btn-success btn-lg' %>
-        <% end %>
-        
       </div>
     </div>
   </div>
   
 <% end %>
 
+  <% if logged_in? %>
+    <div class="post-button text-center">
+      <%= link_to '新規投稿はこちら', new_post_path, class: 'btn btn-success btn-lg' %>
+    </div>
+  <% else %>
+    <div class="start-button text-center">
+      <span class="button">  
+        <%= link_to '今から始める', signup_path, class: 'btn btn-info btn-lg' %>
+      </span>
+      <span class="button">
+        <%= link_to 'ログインする', login_path, class: 'btn btn-success btn-lg' %>
+      </span>
+    </div>
+  <% end %>
 
-<div class="center jumbotron">
-  <div class="text-center">
-    <h1>Welcome to the Food diary</h1>
-  </div>
-</div>
 
 <%= render 'posts/posts', posts: @posts %>
