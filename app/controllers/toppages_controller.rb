@@ -1,5 +1,5 @@
 class ToppagesController < ApplicationController
   def index
-      @posts = Post.all.page(params[:page])
+      @posts = Post.order('updated_at DESC').page(params[:page])
   end
 end

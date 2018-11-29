@@ -6,6 +6,11 @@
       
         <div class="post">
           <div class="col-md-4 col-sm-6 col-xs-12">
+            
+            <p class="text-right">
+              posted at <%= post.created_at  %>
+            </p>
+            
             <div class="panel panel-default">
               <div class="panel-heading text-center">
                 <img src="
@@ -15,6 +20,7 @@
               <div class="panel-body">
                 <p><%= post.content %></p>
               </div>
+              
             </div>
             
             

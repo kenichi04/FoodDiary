@@ -61,7 +61,7 @@ footer {
   margin-bottom: 30px;
 }
 
-.post .panel-default {
+.post {
   margin-top: 50px;
 }
 
@@ -70,6 +70,7 @@ footer {
 }
 
 .post .panel-heading {
+  margin-top: 20px;
   height: 250px;
 }
 
@@ -137,7 +138,7 @@ footer {
 }
 .under-panel {
   margin-top: -15px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .post-in {
