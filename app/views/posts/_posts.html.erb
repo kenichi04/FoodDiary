@@ -25,14 +25,16 @@
                 </p>
               </span>
               
-              <% if current_user == post.user %>
-                <span class="buttons text-right">
-                  <%= link_to '削除する', post, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger' %>
-                </span>
-              <% else %>
-                <span class="buttons text-right">
-                  <%= render 'likes/like_button', post: post %>
-                </span>
+              <% if logged_in? %>
+                <% if current_user == post.user %>
+                  <span class="buttons text-right">
+                    <%= link_to '削除する', post, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger' %>
+                  </span>
+                <% else %>
+                  <span class="buttons text-right">
+                    <%= render 'likes/like_button', post: post %>
+                  </span>
+                <% end %>
               <% end %>
     
             </div>

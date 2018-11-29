@@ -1,9 +1,10 @@
+
   <% if current_user.like_post?(post) %>
     <span class="follow-button">
       <%= form_for(current_user.likes.find_by(post_id: post.id), html: { method: :delete }) do |f| %>
         <%= hidden_field_tag :post_id, post.id %>
           <span class="submit">
-            <%= f.submit 'unlike', class: 'btn btn-danger' %>
+            <%= f.submit 'お気に入り解除', class: 'btn btn-danger' %>
           </span>
       <% end %>
     </span>
@@ -12,7 +13,7 @@
       <%= form_for(current_user.likes.build) do |f| %>
         <%= hidden_field_tag :post_id, post.id %>
           <span class="submit">
-            <%= f.submit 'like', class: 'btn btn-primary' %>
+            <%= f.submit 'お気に入り', class: 'btn btn-warning' %>
           </span>
       <% end %>
     </span>
